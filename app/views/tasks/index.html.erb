@@ -1,0 +1,9 @@
+<h1 class='p-5'>Tasks</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><i class="far fa-check-circle"></i><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Crear nueva tarea", new_task_path %>
